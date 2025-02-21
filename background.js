@@ -4,7 +4,7 @@ function createStick(left = mouse.x, top = mouse.y) {
   stick.style.setProperty("--left", left + (Math.random() - 0.5) * 100 + "px");
   stick.style.setProperty("--top", top + (Math.random() - 0.6) * 100 + "px");
   stick.style.setProperty("--size", Math.random() * 0.75 + 0.5);
-  stick.style.setProperty("--rotation", (Math.random() + 1) * 360 + "deg");
+  stick.style.setProperty("--rotation", Math.random() + 0.2 * 800 + "deg");
   stick.style.setProperty("--angle", Math.random() * 360 + "deg");
   stick.style.setProperty("--travel-x", (Math.random() - 0.5) * 100 + "dvw");
   stick.style.setProperty("--travel-y", (Math.random() - 0.5) * 100 + "dvh");

@@ -15,21 +15,7 @@ body {
   overflow: hidden;
   width: 100dvw;
   height: 100dvh;
-  /* display: flex;
-  justify-content: space-between; */
 }
-
-/* .stick {
-  --size: 1;
-  --angle: 60deg;
-  --duration: 2s;
-  --delay: 1s;
-  --top: 200px;
-  --left: 800px;
-  --travel-x: 500px;
-  --travel-y: 1000px;
-  --rotation: 540deg;
-} */
 
 .stick {
   position: absolute; /* Changed from relative to absolute */

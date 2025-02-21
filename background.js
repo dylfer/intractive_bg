@@ -37,4 +37,4 @@ setInterval(() => {
   const randomLeft = Math.random() * window.innerWidth;
   const randomTop = Math.random() * window.innerHeight;
   createStick(randomLeft, randomTop);
-}, 200);
+}, 100);

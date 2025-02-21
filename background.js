@@ -33,6 +33,12 @@ document.addEventListener("mousemove", function (event) {
   createStick();
 });
 
+document.addEventListener("touchmove", function (event) {
+  mouse.x = event.touches[0].clientX;
+  mouse.y = event.touches[0].clientY;
+  createStick();
+});
+
 setInterval(() => {
   const randomLeft = Math.random() * window.innerWidth;
   const randomTop = Math.random() * window.innerHeight;

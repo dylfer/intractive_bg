@@ -6,18 +6,33 @@ body {
   height: 100vh;
   overflow: hidden;
 }
-.stick {
+
+#background {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100dvw;
+  height: 100dvw;
+  /* display: flex;
+  justify-content: space-between; */
+}
+
+/* .stick {
   --size: 1;
   --angle: 60deg;
   --duration: 2s;
   --delay: 1s;
-  --top: 0;
-  --left: 0;
-  --travel: 500px;
+  --top: 200px;
+  --left: 800px;
+  --travel-x: 500px;
+  --travel-y: 1000px;
   --rotation: 540deg;
-}
+} */
 
 .stick {
+  position: absolute; /* Changed from relative to absolute */
   background-color: blue; /*set in element style*/
   animation: moving_stick ease-in-out infinite;
   animation-duration: var(--duration);
@@ -52,7 +67,7 @@ body {
     opacity: 0;
   }
   100% {
-    transform: translate(var(--travel), var(--travel))
+    transform: translate(var(--travel-x), var(--travel-y))
       rotate(calc(var(--angle) + var(--rotation)));
     opacity: 0;
   }

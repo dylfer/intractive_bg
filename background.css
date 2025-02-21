@@ -1,0 +1,59 @@
+body {
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+.stick {
+  --size: 1;
+  --angle: 60deg;
+  --duration: 2s;
+  --delay: 1s;
+  --top: 0;
+  --left: 0;
+  --travel: 500px;
+  --rotation: 540deg;
+}
+
+.stick {
+  background-color: blue; /*set in element style*/
+  animation: moving_stick ease-in-out infinite;
+  animation-duration: var(--duration);
+  animation-delay: var(--delay);
+  top: var(--top);
+  left: var(--left);
+  width: calc(var(--size) * 2px);
+  height: calc(var(--size) * 100px);
+}
+
+@keyframes moving_stick {
+  0% {
+    transform: translate(0, 0) rotate(var(--angle));
+    opacity: 0.01;
+  }
+  10% {
+    opacity: 1;
+  }
+  65% {
+    opacity: 0.9;
+  }
+  70% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.4;
+  }
+  85% {
+    opacity: 0.2;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    transform: translate(var(--travel), var(--travel))
+      rotate(calc(var(--angle) + var(--rotation)));
+    opacity: 0;
+  }
+}
